@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 삭제 확인</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>게시글 삭제 확인</h2>
+    <p>정말로 게시글 "{{ post.title }}"을 삭제하시겠습니까?</p>
+    <p>이 작업은 되돌릴 수 없습니다.</p>
+    <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}">
+        <button type="submit">네, 삭제합니다</button>
+        <a href="{{ url_for('view', post_id=post.id) }}">아니오, 취소합니다</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="details-container">
+        <h2>{{ post.title }}</h2>
+        <table>
+            <tr>
+                <th>작성자</th>
+                <td>{{ post.author }}</td>
+            </tr>
+            <tr>
+                <th>작성일자</th>
+                <td>{{ post.create_date }}</td>
+            </tr>
+            <tr>
+                <th>수정일자</th>
+                <td>{{ post.update_date }}</td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td>{{ post.content }}</td>
+            </tr>
+        </table>
+
+        <!-- 버튼 그룹 -->
+        <div class="button-group">
+            <a href="{{ url_for('edit', post_id=post.id) }}" class="btn btn-primary">수정하기</a>
+            <a href="{{ url_for('delete_confirm_page', post_id=post.id) }}" class="btn btn-danger">삭제하기</a>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">목록으로</a>
+        </div>
+    </div>
+</body>
+</html>

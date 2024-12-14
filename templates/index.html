@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 목록</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>게시판 목록</h2>
+
+<div class="search-container">
+    <form method="GET" action="{{ url_for('index') }}">
+        <input type="text" name="title" placeholder="제목 검색" value="{{ request.args.get('title', '') }}">
+        <button type="submit">검색</button>
+    </form>
+    <form method="GET" action="{{ url_for('index') }}">
+        <input type="text" name="author" placeholder="작성자 검색" value="{{ request.args.get('author', '') }}">
+        <button type="submit">검색</button>
+    </form>
+    <form method="GET" action="{{ url_for('index') }}">
+        <input type="text" name="search" placeholder="제목, 작성자, 내용 검색" value="{{ request.args.get('search', '') }}">
+        <button type="submit">검색</button>
+    </form>
+</div>
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일자</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><a href="{{ url_for('view', post_id=post.id) }}">{{ post.title }}</a></td>
+                <td>{{ post.author }}</td>
+                <td>{{ post.create_date }}</td>
+            </tr>
+            {% endfor %}
+            {% if not posts %}
+            <tr>
+                <td colspan="4">등록된 글이 없습니다.</td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('post') }}" class="new-post-btn">+ 새 글 작성</a>
+</body>
+</html>

@@ -1,0 +1,348 @@
+/* 전체 페이지 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 섹션 */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 검색창 스타일 */
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #218838;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* 버튼 스타일 */
+button, a.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a.btn-secondary {
+    background-color: #6c757d;
+}
+
+a.btn-danger {
+    background-color: #dc3545;
+}
+
+button:hover, a.btn:hover {
+    opacity: 0.9;
+}
+
+/* 내용 섹션 스타일 */
+.content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+/* 검색창 및 버튼 컨테이너 정렬 */
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-container form {
+    display: flex;
+    gap: 5px;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* 새 글 작성 버튼 스타일 */
+.new-post-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.new-post-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 게시글 작성/수정 페이지 스타일 */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-container input,
+.form-container textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 200px;
+}
+
+.form-container .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-container button,
+.form-container a.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button {
+    background-color: #007bff;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.form-container a.btn-secondary {
+    background-color: #6c757d;
+}
+
+.form-container a.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/*게시글 상세보기*/
+.details-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.details-container th{
+    padding: 12px;
+    border: 1px solid #ddd;
+    color: #fff;
+    text-align: center
+}
+
+.details-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+.details-container th {
+     background-color: #f9f9f9;
+    color: #fff;
+     width: 30%;
+}
+
+.details-container td {
+    background-color: #fff;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/* 버튼 정렬 */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-group button,
+.button-group a {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button {
+    background-color: #007bff;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.button-group a {
+    background-color: #6c757d;
+}
+
+.button-group a:hover {
+    background-color: #5a6268;
+}
+
+
+
